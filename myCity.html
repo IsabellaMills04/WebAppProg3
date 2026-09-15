@@ -51,5 +51,47 @@
                 <td>$544</td>
             </tr>
         </table>
+
+        <hr>
+
+        <h1>Int List Version 1</h1>
+
+        <p>A class to provide a simple list of integers. Used to illustrate 
+            various design and implementation details of a class in Java</p>
+
+        <pre>
+public class IntListVer1 {
+    // class constant for default size
+    private static final int DEFAULT_CAP = 10;
+    
+    //instance variables
+    private int[] iValues;
+    private int iSize;
+    
+    /**
+    * Default constructor. Creates an empty list.
+    */
+    public IntListVer1(){
+        //redirect to single int constructor
+        this(DEFAULT_CAP);
+        //other statments could go here.
+    }
+
+    /**
+    * Constructor to allow user of class to specify 
+    * initial capacity in case they intend to add a lot
+    * of elements to new list. Creates an empty list.
+    * @param initialCap > 0
+    */    
+    public IntListVer1(int initialCap) {
+        assert initialCap > 0 : "Violation of precondition. IntListVer1(int initialCap):"
+            + "initialCap must be greater than 0. Value of initialCap: " + initialCap;
+        iValues = new int[initialCap];
+        iSize = 0;
+    }
+}
+        </pre>
+        
+        <a href="https://www.cs.utexas.edu/~scottm/cs307/javacode/codeSamples/IntListVer1.java">Link to Code Source</a>
     </body>
 </html>
